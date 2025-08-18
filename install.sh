@@ -89,6 +89,7 @@ PACMAN_PKGS=(
     zram-generator
     zsh
     hyprpicker
+    qbittorrent
 )
 
 YAY_PKGS=(
