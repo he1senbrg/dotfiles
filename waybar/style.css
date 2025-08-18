@@ -1,0 +1,125 @@
+* {
+    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    transition: background-color .3s ease-out;
+}
+
+window#waybar {
+    background: transparent;
+    color: #ebdbb2; /* Gruvbox Fg */
+    font-family: SpaceMono Nerd Font, feather;
+    transition: background-color .5s;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(29, 32, 33, 1.0); /* Dark0 */
+    margin: 5px 10px 0px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+.modules-left {
+    padding: 0;
+}
+.modules-center {
+    padding: 0 10px;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#mpd {
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#tray:hover,
+#mode:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#language:hover,
+#mpd:hover {
+    background: rgba(40, 40, 40, 1.0); /* Dark1 */
+}
+
+/* Workspaces */
+#workspaces button {
+    background: transparent;
+    font-family: SpaceMono Nerd Font, feather;
+    font-weight: 900;
+    font-size: 13pt;
+    color: #ebdbb2; /* Fg */
+    border: none;
+    border-radius: 10px;
+}
+#workspaces button.active {
+    background: #32302f; /* Dark2 */
+}
+#workspaces button:hover {
+    background: #282828; /* Dark1 */
+    color: #fabd2f; /* Yellow */
+    box-shadow: none;
+}
+
+/* Custom Icons or Widgets */
+#custom-arch {
+    margin-left: 5px;
+    padding: 0 10px;
+    font-size: 25px;
+    transition: color .5s;
+    color: #83a598; /* Aqua */
+}
+#custom-arch:hover {
+    color: #458588; /* Blue */
+}
+
+/* You can theme individual modules here if desired: */
+#battery {
+    color: #cc241d; /* Red */
+}
+#cpu {
+    color: #d65d0e; /* Orange */
+}
+#memory {
+    color: #fabd2f; /* Yellow */
+}
+#disk {
+    color: #b16286; /* Purple */
+}
+#temperature {
+    color: #8ec07c; /* Green */
+}
+#network {
+    color: #83a598; /* Aqua */
+}
+#pulseaudio,
+#wireplumber {
+    color: #d3869b; /* Magenta */
+}
