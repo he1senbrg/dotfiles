@@ -90,6 +90,8 @@ PACMAN_PKGS=(
     zsh
     hyprpicker
     qbittorrent
+    qt5-wayland 
+    qt6-wayland
 )
 
 YAY_PKGS=(
