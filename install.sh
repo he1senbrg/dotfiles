@@ -99,6 +99,7 @@ PACMAN_PKGS=(
     libvirt
     virt-manager
     xorg-xwayland
+    xorg-xhost
     xwayland-satellite
     vi
     picocom
