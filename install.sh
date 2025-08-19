@@ -102,6 +102,7 @@ PACMAN_PKGS=(
     xwayland-satellite
     vi
     picocom
+    btop
 )
 
 YAY_PKGS=(
