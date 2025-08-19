@@ -117,6 +117,7 @@ alias cmcs="cd /home/loki/Documents/CobbleServer/ && java -Xmx6G -jar fabric-ser
 
 if grep -q Ubuntu /etc/os-release; then
     source /opt/ros/humble/setup.sh
+	export QT_QPA_PLATFORM=xcb
 fi
 
 

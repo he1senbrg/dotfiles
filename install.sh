@@ -92,6 +92,15 @@ PACMAN_PKGS=(
     qbittorrent
     qt5-wayland 
     qt6-wayland
+    dnsmasq
+    polkit
+    mate-polkit
+    qemu-full
+    libvirt
+    virt-manager
+    xorg-xwayland
+    xwayland-satellite
+    vi
 )
 
 YAY_PKGS=(
