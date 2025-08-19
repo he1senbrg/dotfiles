@@ -108,16 +108,17 @@ fastfetch -c examples/13
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias c="clear"
-
-alias pga="/home/loki/.local/bin/pgadmin4"
-alias win="/home/loki/scripts/win11.sh"
-alias mc="/home/loki/Documents/PollyMC/PollyMC & disown && exit"
-alias cmcs="cd /home/loki/Documents/CobbleServer/ && java -Xmx6G -jar fabric-server-mc.1.21.1-loader.0.16.14-launcher.1.1.0.jar nogui"
-
 if grep -q Ubuntu /etc/os-release; then
     source /opt/ros/humble/setup.sh
 	export QT_QPA_PLATFORM=xcb
 fi
 
+alias c="clear"
 
+# alias pga="$HOME/.local/bin/pgadmin4"
+alias win="$HOME/scripts/win11.sh"
+alias mc="$HOME/Documents/PollyMC/PollyMC & disown && exit"
+alias cmcs="cd $HOME/Documents/CobbleServer/ && java -Xmx6G -jar fabric-server-mc.1.21.1-loader.0.16.14-launcher.1.1.0.jar nogui"
+
+alias ptest="picocom -b 115200 /dev/ttyUSB0"
+alias rtest="clear && $HOME/scripts/rtest"

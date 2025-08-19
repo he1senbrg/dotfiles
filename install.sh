@@ -101,6 +101,7 @@ PACMAN_PKGS=(
     xorg-xwayland
     xwayland-satellite
     vi
+    picocom
 )
 
 YAY_PKGS=(
