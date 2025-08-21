@@ -104,6 +104,7 @@ PACMAN_PKGS=(
     vi
     picocom
     btop
+    zip
 )
 
 YAY_PKGS=(
