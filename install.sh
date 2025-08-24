@@ -105,6 +105,7 @@ PACMAN_PKGS=(
     picocom
     btop
     zip
+    go
 )
 
 YAY_PKGS=(
@@ -130,6 +131,8 @@ for dir in "${CONFIG_DIRS[@]}"; do
 done
 
 ln -s "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+
+ln -s "$DOTFILES_DIR/scripts" "$HOME/scripts"
 
 echo "==> Installing pacman packages..."
 sudo pacman -Syu --needed --noconfirm "${PACMAN_PKGS[@]}"
