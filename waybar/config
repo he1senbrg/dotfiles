@@ -1,0 +1,91 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 34,
+    "spacing": 5,
+    "modules-left": ["niri/workspaces", "niri/window", "mpris"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray","pulseaudio","network","battery"],
+
+    "niri/workspaces": {
+        "on-scroll-up": "niri msg action focus-window-or-workspace-up",
+        "on-scroll-down": "niri msg action focus-window-or-workspace-down"
+    },
+
+    "niri/window": {
+        "format": " 󰖲  ",
+        "tooltip": true,
+        "tooltip-format": "{title}",
+        "max-length": 25,
+        "min-length": 0
+    },
+
+    "mpris": {
+	"format": "{player_icon}  {title}",
+	"format-paused": "{status_icon}  {title}",
+      "tooltip-format": "{title}\n{artist}",
+      "max-length": 30,
+	"player-icons": {
+		"default": ""
+	},
+	"status-icons": {
+		"paused": ""
+	},
+      "on-click-middle": "$HOME/dotfiles/scripts/media.sh",
+      "on-click-right": "$HOME/dotfiles/scripts/media.sh"
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p | %a, %d-%m-%Y}",
+        "tooltip": false,
+        "on-click": "$HOME/dotfiles/scripts/media.sh",
+        "on-click-middle": "$HOME/dotfiles/scripts/media.sh",
+        "on-click-right": "$HOME/dotfiles/scripts/media.sh"
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}% ",
+        "format-bluetooth": "󰂯{volume}% {format_source}",
+        "format-bluetooth-muted": "󰂲{format_source}",
+        "format-muted": "󰖁 {format_source}",
+        "format-source": "󰍬 {volume}%",
+        "format-source-muted": "󰍭",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "󰄄",
+            "portable": "󰄄",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pwvucontrol"
+    },
+
+    "network": {
+        "format-wifi": "󰤨  {essid} ({signalStrength}%)",
+        "format-ethernet": "󰈀  {ifname} ",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-disconnected": "󰤯  Disconnected",
+        "on-click": "sh -c 'foot -a nmtui -e nmtui'",
+        "on-click-right": "blueman-manager"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "󰁹 {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-alt": "{time} {icon} ",
+        "format-icons": ["󰂎", "󰁺", "󰁼", "󰁾", "󰁹"]
+    }
+}

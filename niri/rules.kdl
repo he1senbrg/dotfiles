@@ -1,0 +1,153 @@
+// Window rules let you adjust behavior for individual windows.
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
+
+// Set universal window rules
+window-rule {
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Open Clipboard Manager as floating by default.
+window-rule {
+    match app-id="clipse"
+    open-floating true
+    opacity 0.75
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 2
+    }
+
+    min-width 600
+    max-width 600
+    min-height 600
+    max-height 600
+}
+
+// Set Alacritty Opacity
+window-rule {
+    match app-id="Alacritty"
+    opacity 0.75
+    draw-border-with-background false
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 2
+    }
+}
+
+// Set Foot Opacity
+window-rule {
+    match app-id="foot"
+    opacity 0.75
+    draw-border-with-background false
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 2
+    }
+}
+
+// Open nmtui as floating by default.
+window-rule {
+    match app-id="nmtui"
+    open-floating true
+
+    min-width 600
+    max-width 600
+    min-height 600
+    max-height 600
+}
+
+// Open Blueman Manager as floating by default.
+window-rule {
+    match app-id="blueman-manager"
+    open-floating true
+    opacity 0.85
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 2
+    }
+
+    min-width 600
+    max-width 600
+    min-height 600
+    max-height 600
+}
+
+// Set scrcpy dimensions
+window-rule {
+    match app-id="scrcpy"
+    open-floating false
+
+    min-width 425
+    max-width 425
+}
+
+// Set color picker properties
+window-rule {
+    match app-id="color-picker"
+    opacity 0.85
+    open-floating true
+
+    min-width 260
+    max-width 260
+    min-height 100
+    max-height 100
+}
+
+// Open Calculator as floating by default.
+window-rule {
+    match app-id="Calculator"
+    open-floating true
+
+    min-width 380
+}
+
+// Set nvim opacity
+window-rule {
+    match app-id="Alacritty" title=r#"^nvim"#
+
+    opacity 0.95
+    draw-border-with-background false
+}
+
+window-rule {
+    match app-id="com.saivert.pwvucontrol"
+    match app-id="waypaper"
+    opacity 0.90
+    draw-border-with-background false
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 2
+    }
+}
+
+window-rule {
+    match app-id="obsidian"
+    open-maximized true
+}

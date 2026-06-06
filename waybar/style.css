@@ -1,0 +1,81 @@
+* {
+    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    transition: background-color .3s ease-out;
+}
+
+window#waybar {
+    background: transparent;
+    color: #ebdbb2;
+    font-family: SpaceMono Nerd Font, feather;
+    transition: background-color .5s;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(29, 32, 33, 1.0);
+    margin: 5px 10px 0px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.modules-left {
+    padding: 0;
+}
+
+.modules-center {
+    padding: 0 10px;
+}
+
+#mpris,
+#clock,
+#tray,
+#pulseaudio,
+#wireplumber,
+#network,
+#battery {
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+#mpris:hover,
+#clock:hover,
+#tray:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#network:hover,
+#battery:hover {
+    background: rgba(40, 40, 40, 1.0);
+}
+
+#workspaces button {
+    background: transparent;
+    font-family: SpaceMono Nerd Font, feather;
+    font-weight: 900;
+    font-size: 13pt;
+    color: #ebdbb2;
+    border: none;
+    border-radius: 10px;
+}
+#workspaces button.active {
+    background: #32302f;
+}
+#workspaces button:hover {
+    background: #282828;
+    color: #fabd2f;
+    box-shadow: none;
+}
+
+#pulseaudio,
+#wireplumber {
+    color: #d3869b;
+}
+
+#network {
+    color: #83a598;
+}
+
+#battery {
+    color: #cc241d;
+}

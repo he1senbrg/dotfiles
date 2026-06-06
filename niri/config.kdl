@@ -1,0 +1,125 @@
+// This config is in the KDL format: https://kdl.dev
+
+// Check the wiki for a full description of the configuration:
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
+
+include "rules.kdl"
+include "binds.kdl"
+
+// Input device configuration.
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+input {
+    keyboard {
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="30%"
+}
+
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+output "eDP-1" {
+    mode "1920x1200@144.004"
+    scale 1.20
+    transform "normal"
+    position x=1280 y=0
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@60.000"
+    scale 1.0
+    transform "normal"
+    position x=1280 y=0
+}
+
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    DISPLAY ":1.0"
+}
+
+// https://yalter.github.io/niri/Configuration:-Layer-Rules
+layer-rule {
+    match namespace="^awww-daemon$"
+    place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="rofi"
+    match namespace="launcher"
+    opacity 0.90
+    geometry-corner-radius 14
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 2
+    }
+}
+
+// Settings that influence how windows are positioned and sized.
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
+layout {
+    gaps 10
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.25
+        proportion 0.5
+        proportion 0.75
+    }
+
+    default-column-width { proportion 0.5; }
+    background-color "transparent"
+
+    focus-ring {
+        width 2
+        active-color "#89b482"
+        inactive-color "#505050"
+    }
+
+    shadow {
+        on
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+}
+
+// Spawn processes at startup.
+spawn-at-startup "waybar"
+spawn-at-startup "swaync"
+spawn-at-startup "sh" "-c" "clipse -listen &"
+spawn-at-startup "sh" "-c" "waypaper --restore &"
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
+spawn-at-startup "swayosd-server"
+spawn-at-startup "awww-daemon"
+
+// Ask the clients to omit their client-side decorations if possible.
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+cursor {
+    xcursor-theme "Bibata-Modern-Ice"
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+// https://yalter.github.io/niri/Configuration:-Recent-Windows
+recent-windows {
+    highlight {
+        active-color "#928374ff"
+        urgent-color "#ea6962ff"
+        corner-radius 12
+    }
+}
