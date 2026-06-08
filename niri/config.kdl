@@ -49,10 +49,22 @@ layer-rule {
 }
 
 layer-rule {
-    match namespace="rofi"
     match namespace="launcher"
     opacity 0.90
     geometry-corner-radius 14
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 2
+    }
+}
+
+layer-rule {
+    match namespace="rofi"
+    opacity 0.90
+    geometry-corner-radius 22
 
     background-effect {
         xray true
