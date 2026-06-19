@@ -5,7 +5,7 @@
     "spacing": 5,
     "modules-left": ["niri/workspaces", "niri/window", "mpris"],
     "modules-center": ["clock"],
-    "modules-right": ["tray","pulseaudio","network","battery"],
+    "modules-right": ["tray", "pulseaudio", "pulseaudio/slider", "bluetooth", "network", "power-profiles-daemon", "battery"],
 
     "niri/workspaces": {
         "on-scroll-up": "niri msg action focus-window-or-workspace-up",
@@ -49,11 +49,11 @@
 
     "pulseaudio": {
         "format": "{icon} {volume}% ",
-        "format-bluetooth": "󰂯{volume}% {format_source}",
-        "format-bluetooth-muted": "󰂲{format_source}",
-        "format-muted": "󰖁 {format_source}",
-        "format-source": "󰍬 {volume}%",
-        "format-source-muted": "󰍭",
+        "format-bluetooth": "󰂯{volume}% ",
+        "format-bluetooth-muted": "󰂲{format_source} ",
+        "format-muted": "󰖁 {format_source} ",
+        "format-source": " 󰍬{volume}% ",
+        "format-source-muted": "󰍭 ",
         "format-icons": {
             "headphone": "󰋋",
             "hands-free": "󰋎",
@@ -66,6 +66,24 @@
         "on-click": "pwvucontrol"
     },
 
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+
+    "bluetooth": {
+	"format": "",
+	"format-connected": " {device_alias}",
+	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "blueman-manager",
+        "on-click-right": "blueman-manager"
+    },
+
     "network": {
         "format-wifi": "󰤨  {essid} ({signalStrength}%)",
         "format-ethernet": "󰈀  {ifname} ",
@@ -73,7 +91,19 @@
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰤯  Disconnected",
         "on-click": "sh -c 'foot -a nmtui -e nmtui'",
-        "on-click-right": "blueman-manager"
+        "on-click-right": "sh -c 'foot -a nmtui -e nmtui'"
+    },
+
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "   ",
+        "balanced": " ",
+        "power-saver": " "
+      }
     },
 
     "battery": {

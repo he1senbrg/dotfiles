@@ -1,20 +1,23 @@
 * {
-    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family:
+        "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 15px;
-    transition: background-color .3s ease-out;
+    transition: background-color 0.3s ease-out;
 }
 
 window#waybar {
     background: transparent;
     color: #ebdbb2;
-    font-family: SpaceMono Nerd Font, feather;
-    transition: background-color .5s;
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
+    transition: background-color 0.5s;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-    background: rgba(29, 32, 33, 1.0);
+    background: rgba(29, 32, 33, 1);
     margin: 5px 10px 0px;
     padding: 0 5px;
     border-radius: 10px;
@@ -31,11 +34,11 @@ window#waybar {
 #mpris,
 #clock,
 #tray,
-#pulseaudio,
-#wireplumber,
+#bluetooth,
 #network,
+#power-profiles-daemon,
 #battery {
-    padding: 0 10px;
+    padding: 0 5px;
     border-radius: 10px;
 }
 
@@ -43,15 +46,18 @@ window#waybar {
 #clock:hover,
 #tray:hover,
 #pulseaudio:hover,
-#wireplumber:hover,
+#bluetooth:hover,
 #network:hover,
+#power-profiles-daemon:hover,
 #battery:hover {
-    background: rgba(40, 40, 40, 1.0);
+    background: rgba(40, 40, 40, 1);
 }
 
 #workspaces button {
     background: transparent;
-    font-family: SpaceMono Nerd Font, feather;
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
     font-weight: 900;
     font-size: 13pt;
     color: #ebdbb2;
@@ -67,13 +73,51 @@ window#waybar {
     box-shadow: none;
 }
 
-#pulseaudio,
-#wireplumber {
+#pulseaudio-slider {
+    padding: 0 10px 0 2px;
+    margin: 0;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    background: #32302f;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    background: #282828;
+}
+#pulseaudio-slider highlight {
+    min-width: 5px;
+    border-radius: 5px;
+    background: #d3869b;
+}
+
+#pulseaudio {
+    padding: 0 0px 0 10px;
+    border-radius: 10px;
     color: #d3869b;
 }
 
+#bluetooth,
 #network {
     color: #83a598;
+}
+
+#power-profiles-daemon,
+#power-profiles-daemon.performance {
+    color: #ea6962;
+}
+#power-profiles-daemon.balanced {
+    color: #d3869b;
+}
+#power-profiles-daemon.power-saver {
+    color: #a9b665;
 }
 
 #battery {
