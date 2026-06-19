@@ -116,6 +116,7 @@ PACMAN_PKGS=(
     gvfs
     gvfs-mtp
     android-udev
+    less
 )
 
 YAY_PKGS=(
