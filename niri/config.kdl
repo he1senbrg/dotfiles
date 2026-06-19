@@ -105,6 +105,7 @@ layout {
 }
 
 // Spawn processes at startup.
+spawn-at-startup "sh" "-c" "foot --server &"
 spawn-at-startup "waybar"
 spawn-at-startup "swaync"
 spawn-at-startup "sh" "-c" "clipse -listen &"

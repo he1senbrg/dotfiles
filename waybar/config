@@ -90,8 +90,8 @@
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰤯  Disconnected",
-        "on-click": "sh -c 'foot -a nmtui -e nmtui'",
-        "on-click-right": "sh -c 'foot -a nmtui -e nmtui'"
+        "on-click": "sh -c 'footclient -a nmtui -e nmtui'",
+        "on-click-right": "sh -c 'footclient -a nmtui -e nmtui'"
     },
 
     "power-profiles-daemon": {

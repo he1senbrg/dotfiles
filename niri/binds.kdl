@@ -4,8 +4,8 @@ binds {
 
     Mod+Shift+B hotkey-overlay-title="Reload Waybar" { spawn "sh" "-c" "$HOME/scripts/waybar.sh"; }
 
-    Mod+Return repeat=false hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
-    Mod+Shift+Return repeat=false hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+Return repeat=false hotkey-overlay-title="Open a Terminal: foot" { spawn "footclient"; }
+    Mod+Shift+Return repeat=false hotkey-overlay-title="Open a Terminal: foot (standalone)" { spawn "foot"; }
     Mod+S repeat=false hotkey-overlay-title="Launcher" { spawn "sh" "-c" "$HOME/scripts/fuzzel.sh"; }
 
     Mod+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock" "-c" "000000"; }

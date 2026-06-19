@@ -7,6 +7,7 @@ DOTFILES_DIR=$(pwd)
 CONFIG_DIRS=(
     "niri"
     "waybar"
+    "foot"
 )
 
 PACMAN_PKGS=(
