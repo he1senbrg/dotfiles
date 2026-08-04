@@ -81,10 +81,11 @@ window#waybar {
     min-height: 0px;
     min-width: 0px;
     opacity: 0;
+    border-radius: 10px;
     background-image: none;
-    border: none;
     box-shadow: none;
-    background: #32302f;
+    margin-left: 3px;
+    background: #d3869b;
 }
 #pulseaudio-slider trough {
     min-height: 10px;
@@ -93,8 +94,8 @@ window#waybar {
     background: #282828;
 }
 #pulseaudio-slider highlight {
-    min-width: 5px;
-    border-radius: 5px;
+    min-width: 0px;
+    border-radius: 5px 2px 2px 5px;
     background: #d3869b;
 }
 
