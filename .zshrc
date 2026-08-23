@@ -23,6 +23,7 @@ alias cfmt="find . -not -path '*/.*' -type f \( -name '*.cpp' -o -name '*.h' \) 
 alias gd="git diff | bat"
 alias gdib="git diff --staged | bat"
 alias get_esprs='. $HOME/export-esp.sh'
+alias get-idf='source "/home/loki/.espressif/tools/activate_idf_v6.0.2.sh"'
 
 alias win='sudo grub-reboot "Memory test (memtest86+)" && sudo reboot'
 
